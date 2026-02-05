@@ -1,4 +1,8 @@
 <?php
+/*
+    Verifica que el código sea correcto y no esté expirado
+*/
+
 session_start();
 
 if (!isset($_SESSION['2fa_codigo'])) {
@@ -12,7 +16,7 @@ if (
     $codigoIngresado == $_SESSION['2fa_codigo'] &&
     time() <= $_SESSION['2fa_expira']
 ) {
-    // Login completo
+    // Login exitoso
     $_SESSION['usuario'] = $_SESSION['2fa_usuario'];
 
     // Limpiar datos 2FA
