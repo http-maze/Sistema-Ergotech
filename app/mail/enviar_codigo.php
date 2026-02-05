@@ -1,7 +1,7 @@
 <?php
 /*
     Función para enviar el código 2FA por correo
-    Usa PHPMailer (recomendado)
+    PHPMailer
 */
 
 use PHPMailer\PHPMailer\PHPMailer;
@@ -39,3 +39,4 @@ function enviarCodigo($correo, $codigo) {
         // En proyecto escolar, solo ignoramos error
     }
 }
+
