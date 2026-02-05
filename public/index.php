@@ -1,5 +1,8 @@
 <?php
 
+// Cargar el login desde app
+require_once __DIR__ . '/../app/auth/login.php';
+
 use Illuminate\Foundation\Application;
 use Illuminate\Http\Request;
 
